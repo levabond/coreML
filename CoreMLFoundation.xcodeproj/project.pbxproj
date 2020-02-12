@@ -55,6 +55,11 @@
 		25897BF91E58CB8F00D3563C /* Observable+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25897BEB1E58CB8E00D3563C /* Observable+Ext.swift */; };
 		25897BFB1E58CB8F00D3563C /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25897BED1E58CB8E00D3563C /* Reusable.swift */; };
 		25897BFC1E58CB8F00D3563C /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25897BEF1E58CB8E00D3563C /* ViewModelType.swift */; };
+		25ADEF5D23E32E0A00AF4D0C /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25ADEF5C23E32E0A00AF4D0C /* HomeScreenViewController.swift */; };
+		25ADEF6023E3312300AF4D0C /* HomeScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25ADEF5F23E3312300AF4D0C /* HomeScreenViewModel.swift */; };
+		25ADEF6323E3318E00AF4D0C /* HomeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25ADEF6223E3318E00AF4D0C /* HomeUseCase.swift */; };
+		25ADEF6623E331B400AF4D0C /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25ADEF6523E331B400AF4D0C /* Home.swift */; };
+		25ADEF6823E3361900AF4D0C /* HomeNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25ADEF6723E3361900AF4D0C /* HomeNavigator.swift */; };
 		2DEEE5268D97F40515D1C542 /* Pods_DomainTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5764703F1E249BEDFC31014 /* Pods_DomainTests.framework */; };
 		4171B21201FC20FD72A143D0 /* Pods_CoreDataPlatformTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C03758DD874CBFB48A52CE5 /* Pods_CoreDataPlatformTests.framework */; };
 		486DF1D19A275AF777D78435 /* Pods_CoreMLFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CD158BCAFA02FA24E284205 /* Pods_CoreMLFoundation.framework */; };
@@ -316,6 +321,11 @@
 		25897BEB1E58CB8E00D3563C /* Observable+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+Ext.swift"; sourceTree = "<group>"; };
 		25897BED1E58CB8E00D3563C /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		25897BEF1E58CB8E00D3563C /* ViewModelType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
+		25ADEF5C23E32E0A00AF4D0C /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
+		25ADEF5F23E3312300AF4D0C /* HomeScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewModel.swift; sourceTree = "<group>"; };
+		25ADEF6223E3318E00AF4D0C /* HomeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUseCase.swift; sourceTree = "<group>"; };
+		25ADEF6523E331B400AF4D0C /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		25ADEF6723E3361900AF4D0C /* HomeNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigator.swift; sourceTree = "<group>"; };
 		2AF991A848BB04AAFE03A804 /* Pods_NetworkPlatformTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NetworkPlatformTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BBB44DCB902E459F05D68B0 /* Pods-CoreDataPlatformTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreDataPlatformTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoreDataPlatformTests/Pods-CoreDataPlatformTests.release.xcconfig"; sourceTree = "<group>"; };
 		2C03758DD874CBFB48A52CE5 /* Pods_CoreDataPlatformTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoreDataPlatformTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -781,8 +791,8 @@
 		25897BBE1E58C42D00D3563C /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
-				25897BBF1E58C42D00D3563C /* PostsUseCase.swift */,
-				515F9C31AF4C4644DBDAE735 /* UseCaseProvider.swift */,
+				25ADEF6123E3317F00AF4D0C /* Old */,
+				25ADEF6223E3318E00AF4D0C /* HomeUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -790,15 +800,8 @@
 		25897BC21E58C42D00D3563C /* Entries */ = {
 			isa = PBXGroup;
 			children = (
-				BD107F811E72C5640043D900 /* Address.swift */,
-				BD107F781E72B7320043D900 /* Album.swift */,
-				BD107F761E72B71E0043D900 /* Comment.swift */,
-				BD107F831E72C5740043D900 /* Company.swift */,
-				25897BC31E58C42D00D3563C /* Location.swift */,
-				BD107F7A1E72B7560043D900 /* Photo.swift */,
-				25897BC51E58C42D00D3563C /* Post.swift */,
-				BD107F7C1E72B7750043D900 /* Todo.swift */,
-				BD107F7E1E72B7820043D900 /* User.swift */,
+				25ADEF6423E331A000AF4D0C /* Old */,
+				25ADEF6523E331B400AF4D0C /* Home.swift */,
 			);
 			path = Entries;
 			sourceTree = "<group>";
@@ -830,12 +833,56 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
-		515F903025B664C6A43D7962 /* Scenes */ = {
+		25ADEF5B23E32CDC00AF4D0C /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				25ADEF5C23E32E0A00AF4D0C /* HomeScreenViewController.swift */,
+				25ADEF5F23E3312300AF4D0C /* HomeScreenViewModel.swift */,
+				25ADEF6723E3361900AF4D0C /* HomeNavigator.swift */,
+			);
+			path = HomeScreen;
+			sourceTree = "<group>";
+		};
+		25ADEF5E23E32F9800AF4D0C /* Example */ = {
 			isa = PBXGroup;
 			children = (
 				515F94479B9C0EF5329F9428 /* AllPosts */,
 				515F9B161E41C7D130E180EF /* CreatePost */,
 				515F9401ED57113EEF898228 /* EditPost */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
+		25ADEF6123E3317F00AF4D0C /* Old */ = {
+			isa = PBXGroup;
+			children = (
+				25897BBF1E58C42D00D3563C /* PostsUseCase.swift */,
+				515F9C31AF4C4644DBDAE735 /* UseCaseProvider.swift */,
+			);
+			path = Old;
+			sourceTree = "<group>";
+		};
+		25ADEF6423E331A000AF4D0C /* Old */ = {
+			isa = PBXGroup;
+			children = (
+				BD107F811E72C5640043D900 /* Address.swift */,
+				BD107F781E72B7320043D900 /* Album.swift */,
+				BD107F761E72B71E0043D900 /* Comment.swift */,
+				BD107F831E72C5740043D900 /* Company.swift */,
+				25897BC31E58C42D00D3563C /* Location.swift */,
+				BD107F7A1E72B7560043D900 /* Photo.swift */,
+				25897BC51E58C42D00D3563C /* Post.swift */,
+				BD107F7C1E72B7750043D900 /* Todo.swift */,
+				BD107F7E1E72B7820043D900 /* User.swift */,
+			);
+			path = Old;
+			sourceTree = "<group>";
+		};
+		515F903025B664C6A43D7962 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				25ADEF5E23E32F9800AF4D0C /* Example */,
+				25ADEF5B23E32CDC00AF4D0C /* HomeScreen */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -1489,10 +1536,13 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-CoreMLFoundation/Pods-CoreMLFoundation-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Differentiator-framework/Differentiator.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa-framework/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxDataSources-framework/RxDataSources.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRelay-framework/RxRelay.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift-framework/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit-framework/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/QueryKit/QueryKit.framework",
-				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
-				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
@@ -1501,10 +1551,13 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QueryKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QueryKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
@@ -1541,7 +1594,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-DomainTests/Pods-DomainTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift-framework/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
 				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
 				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
@@ -1583,7 +1636,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-NetworkPlatformTests/Pods-NetworkPlatformTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift-framework/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
 				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
 				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
@@ -1643,7 +1696,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-CoreDataPlatformTests/Pods-CoreDataPlatformTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift-framework/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
 				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
 				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
@@ -1667,7 +1720,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-CoreMLFoundationTests/Pods-CoreMLFoundationTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift-framework/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
 				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
 				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
@@ -1727,7 +1780,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-RealmPlatformTests/Pods-RealmPlatformTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift-framework/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
 				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
 				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
@@ -1809,10 +1862,13 @@
 				25897BF21E58CB8E00D3563C /* Application.swift in Sources */,
 				25897BF91E58CB8F00D3563C /* Observable+Ext.swift in Sources */,
 				25897BF71E58CB8F00D3563C /* ActivityIndicator.swift in Sources */,
+				25ADEF6823E3361900AF4D0C /* HomeNavigator.swift in Sources */,
 				25897B041E58BD9100D3563C /* AppDelegate.swift in Sources */,
 				2526A7141E59F8260078870E /* ErrorTracker.swift in Sources */,
 				25897BFC1E58CB8F00D3563C /* ViewModelType.swift in Sources */,
 				515F94853EF21BD13D636584 /* PostsNavigator.swift in Sources */,
+				25ADEF5D23E32E0A00AF4D0C /* HomeScreenViewController.swift in Sources */,
+				25ADEF6023E3312300AF4D0C /* HomeScreenViewModel.swift in Sources */,
 				515F977483234BB090F6D704 /* PostsViewController.swift in Sources */,
 				515F9083DB52FEDFEE97A5E6 /* PostsViewModel.swift in Sources */,
 				515F9590146BEE2A0626CFF1 /* PostTableViewCell.swift in Sources */,
@@ -1846,6 +1902,8 @@
 				BD107F771E72B71E0043D900 /* Comment.swift in Sources */,
 				25897BCB1E58C42D00D3563C /* Post.swift in Sources */,
 				BD107F821E72C5640043D900 /* Address.swift in Sources */,
+				25ADEF6623E331B400AF4D0C /* Home.swift in Sources */,
+				25ADEF6323E3318E00AF4D0C /* HomeUseCase.swift in Sources */,
 				BD107F791E72B7320043D900 /* Album.swift in Sources */,
 				BD107F7D1E72B7750043D900 /* Todo.swift in Sources */,
 				BD107F841E72C5740043D900 /* Company.swift in Sources */,

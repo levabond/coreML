@@ -2,18 +2,20 @@
 platform :ios, '11.0'
 inhibit_all_warnings!
 
+pod 'RxDataSources', '~> 4.0'
+pod 'SnapKit'
 def rx_swift
-    pod 'RxSwift', '~> 5.0'
+  pod 'RxSwift', '~> 5.0'
 end
 
 def rx_cocoa
-    pod 'RxCocoa', '~> 5.0'
+  pod 'RxCocoa', '~> 5.0'
 end
 
 def test_pods
-    pod 'RxTest'
-    pod 'RxBlocking'
-    pod 'Nimble'
+  pod 'RxTest'
+  pod 'RxBlocking'
+  pod 'Nimble'
 end
 
 
@@ -27,7 +29,7 @@ target 'CoreMLFoundation' do
     inherit! :search_paths
     test_pods
   end
-
+  
 end
 
 target 'CoreDataPlatform' do
@@ -39,33 +41,33 @@ target 'CoreDataPlatform' do
     inherit! :search_paths
     test_pods
   end
-
+  
 end
 
 target 'Domain' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
   rx_swift
-
+  
   target 'DomainTests' do
     inherit! :search_paths
     test_pods
   end
-
+  
 end
 
 target 'NetworkPlatform' do
-    # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
-    use_frameworks!
-    rx_swift
-    pod 'Alamofire'
-    pod 'RxAlamofire'
-
-    target 'NetworkPlatformTests' do
-        inherit! :search_paths
-        test_pods
-    end
-    
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+  rx_swift
+  pod 'Alamofire'
+  pod 'RxAlamofire'
+  
+  target 'NetworkPlatformTests' do
+    inherit! :search_paths
+    test_pods
+  end
+  
 end
 
 target 'RealmPlatform' do
@@ -76,10 +78,10 @@ target 'RealmPlatform' do
   pod 'QueryKit'
   pod 'RealmSwift', '~> 3.15'
   pod 'Realm', '~> 3.15'
-
+  
   target 'RealmPlatformTests' do
     inherit! :search_paths
     test_pods
   end
-
+  
 end
