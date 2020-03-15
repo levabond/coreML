@@ -4,6 +4,8 @@ inhibit_all_warnings!
 
 pod 'RxDataSources', '~> 4.0'
 pod 'SnapKit'
+
+
 def rx_swift
   pod 'RxSwift', '~> 5.0'
 end
@@ -25,6 +27,11 @@ target 'CoreMLFoundation' do
   rx_cocoa
   rx_swift
   pod 'QueryKit'
+  pod 'PinLayout'
+  pod 'Hero'
+  pod 'Kingfisher', '~> 5.0'
+  pod 'ScalingCarousel'
+  
   target 'CoreMLFoundationTests' do
     inherit! :search_paths
     test_pods

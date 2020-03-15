@@ -22,8 +22,11 @@ final class DefaultHomeNavigator: HomeNavigator {
 
     func toHome() {
         window.makeKeyAndVisible()
-        let vc = HomeScreenViewController()        
-        window.rootViewController = UINavigationController(rootViewController: vc)
+//        window.hero.id = "test 1"
+        let vc = HomeScreenViewController()
+//        vc.hero.isEnabled = true
+//        vc.tableView.hero.id = "test 1"
         
+        window.rootViewController = UINavigationController(rootViewController: vc)
     }
 }

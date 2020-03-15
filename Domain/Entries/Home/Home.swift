@@ -60,15 +60,13 @@ public struct Home: Codable {
     }
 }
 
-//extension User: Equatable {
-//    public static func == (lhs: User, rhs: User) -> Bool {
-//        return lhs.uid == rhs.uid &&
-//            lhs.address == rhs.address &&
-//            lhs.company == rhs.company &&
-//            lhs.email == rhs.email &&
-//            lhs.name == rhs.name &&
-//            lhs.phone == rhs.phone &&
-//            lhs.username == rhs.username &&
-//            lhs.website == rhs.website
-//    }
-//}
+public struct HomeItem: Equatable {
+    public var title: String
+    public var image: String
+    
+    public init(title: String,
+                image: String) {
+        self.title = title
+        self.image = image
+    }
+}
