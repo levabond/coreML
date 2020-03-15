@@ -163,8 +163,7 @@ class HomeItemFactory {
                 ]
             ),
             .NewProvidableSection(items: [
-                .NewSectionItem(model: "Test"),
-                .NewSectionItem(model: "Test2")
+                .NewSectionItem(model: "Test")
             ])
         ]
     }

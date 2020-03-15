@@ -27,6 +27,6 @@ struct MainTheme {
         ]
         
         let label = UILabel.appearance()
-        label.textColor = textColor
+        label.textColor = .white
     }
 }
