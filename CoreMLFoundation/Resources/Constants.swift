@@ -7,3 +7,7 @@
 //
 
 import Foundation
+
+struct Constants {
+    static let mobileApi: String = "9010d93f"
+}

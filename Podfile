@@ -32,8 +32,8 @@ target 'CoreMLFoundation' do
   pod 'Kingfisher', '~> 5.0'
   pod 'ScalingCarousel'
   pod "UPCarouselFlowLayout"
+  pod 'Moya', '~> 14.0'
 
-  
   target 'CoreMLFoundationTests' do
     inherit! :search_paths
     test_pods

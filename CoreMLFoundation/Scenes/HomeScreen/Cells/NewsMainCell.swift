@@ -31,16 +31,8 @@ class HomeNewsCell: UITableViewCell {
         
         carousel?.dataSource = self
         carousel?.delegate = self
-//        carousel?.translatesAutoresizingMaskIntoConstraints = false
-        
-        // Register our custom cell for dequeueing
         carousel?.register(Cell.self, forCellWithReuseIdentifier: "cell")
         
-        //        scalingCarousel?.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 1).isActive = true
-        //        scalingCarousel?.heightAnchor.constraint(equalToConstant:300).isActive = true
-        //        scalingCarousel?.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-        //        scalingCarousel?.topAnchor.constraint(equalTo: topAnchor, constant: 50).isActive = true
-        // Add our carousel as a subview
         addSubview(carousel!)
     }
     
