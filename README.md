@@ -4,6 +4,14 @@ Core ML тестинг
 #### Архитектура: https://github.com/sergdort/CleanArchitectureRxSwift
 
 Pods:
-- RxSwift
-- RxDataSource
-- SnapKit
+  Utils
+  - RxSwift
+  - RxDataSource
+
+  UI:
+  - SnapKit
+  - Hero
+  - PinLayout
+
+  Network:
+  - Moya
